@@ -1,0 +1,142 @@
+.body {
+  flex: 1;
+  max-width: 640px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+ 
+/* ── Empty state ── */
+.empty {
+  color: #555;
+  font-size: 14px;
+  font-family: Georgia, serif;
+  margin-top: 4rem;
+}
+ 
+/* ── Overall card ── */
+.overallCard {
+  width: 100%;
+  background: #1F1F1F;
+  border: 0.5px solid #333;
+  border-radius: 12px;
+  padding: 1.75rem 2rem;
+}
+ 
+.overallLabel {
+  font-family: Georgia, serif;
+  font-size: 12px;
+  color: #C8A96E;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+ 
+.overallScoreRow {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+ 
+.overallScore {
+  font-family: Georgia, serif;
+  font-size: 3rem;
+  color: #E8E8E8;
+  line-height: 1;
+}
+ 
+.overallLevel {
+  font-size: 13px;
+  color: #888;
+}
+ 
+/* overall bar */
+.barTrack {
+  width: 100%;
+  height: 6px;
+  background: #2A2A2A;
+  border-radius: 3px;
+  overflow: hidden;
+}
+ 
+.barFill {
+  height: 100%;
+  background: linear-gradient(90deg, #9A7A44, #C8A96E);
+  border-radius: 3px;
+  transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+ 
+.barTickRow {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 6px;
+}
+ 
+.barTick {
+  font-size: 10px;
+  color: #444;
+}
+ 
+/* ── Section grid ── */
+.sectionGrid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+}
+ 
+.sectionCard {
+  background: #1F1F1F;
+  border: 0.5px solid #333;
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+ 
+.sectionTitle {
+  font-family: Georgia, serif;
+  font-size: 13px;
+  color: #C8A96E;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+ 
+.radialWrapper {
+  width: 90px;
+  height: 90px;
+}
+ 
+.radialSvg {
+  width: 100%;
+  height: 100%;
+}
+ 
+.sectionPct {
+  font-size: 22px;
+  font-family: Georgia, serif;
+  color: #E8E8E8;
+}
+ 
+/* section bar */
+.sectionBarTrack {
+  width: 100%;
+  height: 4px;
+  background: #2A2A2A;
+  border-radius: 2px;
+  overflow: hidden;
+}
+ 
+.sectionBarFill {
+  height: 100%;
+  background: linear-gradient(90deg, #9A7A44, #C8A96E);
+  border-radius: 2px;
+  transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}

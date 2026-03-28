@@ -1,0 +1,41 @@
+.navBar {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.navItem {
+  color: #bbb;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+.navItem:hover {
+  color: #fff;
+}
+
+.navItem.active {
+  color: #fff;
+}
+
+.navItem::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  background-color: #fff;
+  transition: width 0.3s ease;
+}
+
+.navItem:hover::after,
+.navItem.active::after {
+  width: 100%;
+}

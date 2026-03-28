@@ -1,0 +1,37 @@
+.scaleDemo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.scaleDemoItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.dot {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1.5px solid #3A3A3A;
+  background: transparent;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.dot:hover {
+  border-color: #C8A96E;
+  background: #2A2A2A;
+}
+
+.dot.selected {
+  background: #C8A96E;
+  border-color: #C8A96E;
+}
+
+.scaleDemoLabel {
+  font-size: 13px;
+  color: #AAA;
+}

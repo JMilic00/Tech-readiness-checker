@@ -1,0 +1,185 @@
+.body {
+  flex: 1;
+  max-width: 560px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.title {
+  font-family: Georgia, serif;
+  font-size: 1.8rem;
+  color: #E8E8E8;
+  text-align: center;
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #888;
+  text-align: center;
+  margin: 0;
+}
+
+/* ── Card ── */
+.card {
+  width: 100%;
+  background: #1F1F1F;
+  border: 0.5px solid #333;
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.cardLabel {
+  font-family: Georgia, serif;
+  font-size: 11px;
+  color: #C8A96E;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin: 0;
+}
+
+.cardText {
+  font-size: 14px;
+  color: #AAA;
+  margin: 0;
+}
+
+.cardText strong {
+  color: #E8E8E8;
+}
+
+/* ── Sections list ── */
+.sectionList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.sectionItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.sectionIndex {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1.5px solid #C8A96E;
+  color: #C8A96E;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-family: Georgia, serif;
+}
+
+.sectionTitle {
+  font-size: 14px;
+  color: #E8E8E8;
+  margin: 0;
+}
+
+.sectionCount {
+  font-size: 12px;
+  color: #555;
+  margin: 0;
+}
+
+/* ── Scale demo ── */
+.scaleDemo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.scaleDemoItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.dot {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1.5px solid #3A3A3A;
+  background: transparent;
+  cursor: default;
+  flex-shrink: 0;
+}
+
+.dot.selected {
+  background: #C8A96E;
+  border-color: #C8A96E;
+}
+
+.scaleDemoLabel {
+  font-size: 13px;
+  color: #AAA;
+}
+
+/* ── Level list ── */
+.levelList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.levelItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.levelBadge {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  background: #2A2A2A;
+  color: #C8A96E;
+  font-size: 13px;
+  font-family: Georgia, serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.levelLabel {
+  font-size: 14px;
+  color: #E8E8E8;
+  margin: 0;
+}
+
+.levelDesc {
+  font-size: 12px;
+  color: #555;
+  margin: 0;
+}
+
+/* ── Start button ── */
+.startButton {
+  display: inline-block;
+  padding: 0.75rem 2.5rem;
+  background: #C8A96E;
+  color: #141414;
+  font-family: Georgia, serif;
+  font-size: 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.startButton:hover {
+  background: #b8944f;
+}

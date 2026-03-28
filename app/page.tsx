@@ -1,66 +1,69 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import Link from "next/link";
+import styles from "./homepage.module.css";
+import { sections } from "@/config/scoring";
+import ScaleDemo from "@/components/scale-demo";
+
+const levels = [
+  { level: 1, label: "Initial", desc: "No formal tech practices in place." },
+  { level: 2, label: "Developing", desc: "Some practices exist but are inconsistent." },
+  { level: 3, label: "Defined", desc: "Practices are documented and followed." },
+  { level: 4, label: "Advanced", desc: "Practices are measured and optimised." },
+  { level: 5, label: "Optimised", desc: "Continuous improvement is embedded." },
+];
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.tsx file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main className={styles.body}>
+      <h1 className={styles.title}>Technology Readiness Assessment</h1>
+      <p className={styles.subtitle}>Before you begin, here is how the test works.</p>
+
+      <div className={styles.card}>
+        <p className={styles.cardLabel}>Sections</p>
+        <p className={styles.cardText}>
+          The test is divided into <strong>{sections.length} sections</strong>:
+        </p>
+        <div className={styles.sectionList}>
+          {sections.map((s, i) => (
+            <div key={s.id} className={styles.sectionItem}>
+              <span className={styles.sectionIndex}>{i + 1}</span>
+              <div>
+                <p className={styles.sectionTitle}>{s.title}</p>
+                <p className={styles.sectionCount}>{s.questions.length} questions</p>
+              </div>
+            </div>
+          ))}
         </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </div>
+
+      <div className={styles.card}>
+        <p className={styles.cardLabel}>How to answer</p>
+        <p className={styles.cardText}>
+          Each statement has 5 circles. Select the one that best reflects your situation.
+        </p>
+        <ScaleDemo />
+      </div>  
+
+      <div className={styles.card}>
+        <p className={styles.cardLabel}>Result</p>
+        <p className={styles.cardText}>
+          After completing all sections you will receive a TR Level from 1 to 5.
+        </p>
+        <div className={styles.levelList}>
+          {levels.map(({ level, label, desc }) => (
+            <div key={level} className={styles.levelItem}>
+              <span className={styles.levelBadge}>{level}</span>
+              <div>
+                <p className={styles.levelLabel}>{label}</p>
+                <p className={styles.levelDesc}>{desc}</p>
+              </div>
+            </div>
+          ))}
         </div>
-      </main>
-    </div>
+      </div>
+
+      <Link href="/test" className={styles.startButton}>
+        Start Assessment
+      </Link>
+    </main>
   );
 }
