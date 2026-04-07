@@ -7,12 +7,12 @@ export type AnswerMap = {
 export type Question = {
   id: string;
   text: string;
-  weight: number;
   recommendation: string;
 };
 
 export type Section = {
   id: string;
   title: string;
+  weight: number;
   questions: Question[];
 };

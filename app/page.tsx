@@ -41,7 +41,7 @@ export default function Home() {
           Each statement has 5 circles. Select the one that best reflects your situation.
         </p>
         <ScaleDemo />
-      </div>  
+      </div>
 
       <div className={styles.card}>
         <p className={styles.cardLabel}>Result</p>

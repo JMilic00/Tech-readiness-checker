@@ -4,12 +4,14 @@ import { useEffect, useState } from "react";
 import { sections } from "@/config/scoring";
 import { calculateScore } from "@/lib/calculateScore";
 import { AnswerMap } from "@/types/assessment";
+import { useRouter } from "next/navigation";
 import styles from "./results.module.css";
 
 export default function ResultsPage() {
   const [result, setResult] = useState<ReturnType<typeof calculateScore> | null>(null);
+  const router = useRouter();
 
-  useEffect(() => {
+   useEffect(() => {
     const raw = localStorage.getItem("assessment_answers");
     if (raw) {
       const answers: AnswerMap = JSON.parse(raw);
@@ -72,6 +74,23 @@ export default function ResultsPage() {
             </div>
           );
         })}
+      </div>
+      <div className={styles.actions}>
+        <button
+        className={styles.actionButton}
+        onClick={() => {
+          localStorage.removeItem("assessment_answers");
+          router.push("/test");
+        }}
+        >
+          Ponovi test
+        </button>
+        <button
+          className={`${styles.actionButton} ${styles.actionButtonPrimary}`}
+          onClick={() => window.print()}
+        >
+          Print to PDF
+        </button>
       </div>
     </main>
   );

@@ -145,4 +145,10 @@ p a:active {
 .nav-item.active::after {
   width: 100%;
 }
-/*header*/
+
+@media print {
+  header,
+  footer {
+    display: none;
+  }
+}
