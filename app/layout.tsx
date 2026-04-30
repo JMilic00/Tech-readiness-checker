@@ -2,8 +2,8 @@ import './globals.css';
 import { ReactNode } from 'react';
 
 export const metadata = {
-  title: 'NextLevel Food',
-  description: 'Delicious meals, shared by a food-loving community.',
+  title: "Tech Readiness Checker",
+  description: "Assess your startup's technical readiness",
 };
 
 interface RootLayoutProps {
