@@ -8,6 +8,7 @@ export type Question = {
   id: string;
   text: string;
   recommendation: string;
+  impact: 1 | 2 | 3;
 };
 
 export type Section = {

@@ -1,0 +1,14 @@
+.progressTrack {
+  width: 100%;
+  height: 3px;
+  background: #2A2A2A;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: linear-gradient(90deg, #9A7A44, #C8A96E);
+  border-radius: 2px;
+  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}

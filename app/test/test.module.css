@@ -10,103 +10,36 @@
   gap: 1rem;
 }
 
-.content{
+.content {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-
 }
 
-/* ── Start button ── */
-.finishButton {
-  display: inline-block;
-  padding: 0.75rem 2.5rem;
-  background: #C8A96E;
-  color: #141414;
-  font-family: Georgia, serif;
-  font-size: 15px;
-  border-radius: 8px;
-  text-decoration: none;
-  transition: background 0.2s;
-}
-
-.finishButton:hover {
-  background: #b8944f;
-}
-
-.sectionHeader {
-  width: 100%;
-  text-align: center;
-  margin-bottom: 0.5rem;
-}
-
-.sectionCounter {
-  font-size: 12px;
-  color: #C8A96E;
-  font-family: Georgia, serif;
-  letter-spacing: 0.08em;
-  margin: 0 0 0.25rem 0;
-}
-
-.sectionTitle {
-  font-size: 1.2rem;
-  font-family: Georgia, serif;
-  color: #E8E8E8;
-  margin: 0;
-}
-
-.navigation {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  margin-top: 1rem;
-}
-
-.navButton {
-  padding: 0.65rem 1.75rem;
-  border-radius: 8px;
-  border: 1px solid #333;
-  background: transparent;
-  color: #888;
+.warning {
+  color: #e05555;
   font-size: 14px;
-  cursor: pointer;
-  transition: border-color 0.2s, color 0.2s;
-}
-
-.navButton:hover:not(:disabled) {
-  border-color: #C8A96E;
-  color: #E8E8E8;
-}
-
-.navButton:disabled {
-  opacity: 0.3;
-  cursor: default;
-}
-
-.navButtonPrimary {
-  background: #C8A96E;
-  border-color: #C8A96E;
-  color: #141414;
-}
-
-.navButtonPrimary:hover {
-  background: #b8944f;
-  border-color: #b8944f;
-}
-
-.progressTrack {
+  font-family: Georgia, serif;
+  text-align: center;
   width: 100%;
-  height: 3px;
-  background: #2A2A2A;
-  border-radius: 2px;
-  overflow: hidden;
+  animation: shake 0.4s cubic-bezier(0.36, 0.07, 0.19, 0.97);
 }
 
-.progressFill {
-  height: 100%;
-  background: linear-gradient(90deg, #9A7A44, #C8A96E);
-  border-radius: 2px;
-  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+@keyframes shake {
+  0%   { transform: translateX(0); }
+  20%  { transform: translateX(-8px); }
+  40%  { transform: translateX(8px); }
+  60%  { transform: translateX(-6px); }
+  80%  { transform: translateX(6px); }
+  100% { transform: translateX(0); }
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  padding: 3rem;
+  color: #888;
+  font-family: Georgia, serif;
 }

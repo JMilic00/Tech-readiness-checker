@@ -1,7 +1,7 @@
-import Link from "next/link";
 import styles from "./homepage.module.css";
 import { sections } from "@/config/scoring";
-import ScaleDemo from "@/components/scale-demo";
+import ScaleDemo from "@/components/homepage/scale-demo/scale-demo";
+import StartButton from "@/components/homepage/start-button/start-button";
 
 const levels = [
   { level: 1, label: "Initial", desc: "No formal tech practices in place." },
@@ -61,9 +61,37 @@ export default function Home() {
         </div>
       </div>
 
-      <Link href="/test" className={styles.startButton}>
-        Start Assessment
-      </Link>
+      <div className={styles.card}>
+        <p className={styles.cardLabel}>What you will get</p>
+        <p className={styles.cardText}>
+          After completing the assessment, your results page will include:
+        </p>
+        <div className={styles.levelList}>
+          <div className={styles.levelItem}>
+            <span className={styles.levelBadge}>1</span>
+            <div>
+              <p className={styles.levelLabel}>Overall TR Level</p>
+              <p className={styles.levelDesc}>Your total score and maturity level across all sections.</p>
+            </div>
+          </div>
+          <div className={styles.levelItem}>
+            <span className={styles.levelBadge}>2</span>
+            <div>
+              <p className={styles.levelLabel}>Section breakdown</p>
+              <p className={styles.levelDesc}>Individual score for each of the {sections.length} sections.</p>
+            </div>
+          </div>
+          <div className={styles.levelItem}>
+            <span className={styles.levelBadge}>3</span>
+            <div>
+              <p className={styles.levelLabel}>Recommendations</p>
+              <p className={styles.levelDesc}>Specific actions for every question you scored low on, ranked by impact.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <StartButton />
     </main>
   );
 }

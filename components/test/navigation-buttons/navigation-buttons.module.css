@@ -1,0 +1,38 @@
+.navigation {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.navButton {
+  padding: 0.65rem 1.75rem;
+  border-radius: 8px;
+  border: 1px solid #333;
+  background: transparent;
+  color: #888;
+  font-size: 14px;
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.navButton:hover:not(:disabled) {
+  border-color: #C8A96E;
+  color: #E8E8E8;
+}
+
+.navButton:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.navButtonPrimary {
+  background: #C8A96E;
+  border-color: #C8A96E;
+  color: #141414;
+}
+
+.navButtonPrimary:hover {
+  background: #b8944f;
+  border-color: #b8944f;
+}

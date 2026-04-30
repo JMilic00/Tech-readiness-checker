@@ -1,0 +1,62 @@
+.overallCard {
+  width: 100%;
+  background: #1A1A1A;
+  border: 1px solid #2A2A2A;
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.overallLabel {
+  font-size: 12px;
+  color: #C8A96E;
+  font-family: Georgia, serif;
+  letter-spacing: 0.08em;
+  margin: 0 0 0.5rem 0;
+}
+
+.overallScoreRow {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.overallScore {
+  font-size: 2.5rem;
+  font-family: Georgia, serif;
+  color: #E8E8E8;
+  line-height: 1;
+}
+
+.overallLevel {
+  font-size: 14px;
+  color: #888;
+  font-family: Georgia, serif;
+}
+
+.barTrack {
+  width: 100%;
+  height: 6px;
+  background: #2A2A2A;
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 0.4rem;
+}
+
+.barFill {
+  height: 100%;
+  background: linear-gradient(90deg, #9A7A44, #C8A96E);
+  border-radius: 3px;
+  transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.barTickRow {
+  display: flex;
+  justify-content: space-between;
+}
+
+.barTick {
+  font-size: 10px;
+  color: #444;
+  font-family: Georgia, serif;
+}

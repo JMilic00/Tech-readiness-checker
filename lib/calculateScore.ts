@@ -27,4 +27,4 @@ export function calculateScore(answers: AnswerMap) {
   else if (finalScore >= 25) level = 2;
 
   return { totalScore: finalScore, level, sectionScores };
-}
+} 
