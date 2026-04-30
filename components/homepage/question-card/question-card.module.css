@@ -58,3 +58,11 @@
   background: #C8A96E;
   border-color: #C8A96E;
 }
+
+.dot:focus {
+  outline: none;
+}
+
+.dot:focus-visible {
+  outline: 2px solid #C8A96E;
+}
