@@ -2,7 +2,7 @@
 
 Online upitnik koji mjeri tehnološku zrelost startupa ili tima. Korisnik ispuni 24 pitanja u 6 sekcija i dobiva TR Score (0–100), TR Level (1–5) te personalizirane preporuke za svako problematično područje.
 
-**Live demo:** 
+**Live demo:** https://tech-readiness-checker.vercel.app
 
 ---
 
