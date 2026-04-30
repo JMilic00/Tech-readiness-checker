@@ -47,6 +47,8 @@
   cursor: pointer;
   transition: background 0.15s, border-color 0.15s;
   flex-shrink: 0;
+  outline: none;                         
+  -webkit-tap-highlight-color: transparent;
 }
 
 .dot:hover {
